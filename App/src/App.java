@@ -3,16 +3,16 @@ import java.util.*;
 public class App {
     public static void main(String[] args) {
 
-        System.out.println("UC5 - Ordered Unique Bogies");
+        System.out.println("UC6 - Bogie Capacity");
 
-        Set<String> formation = new LinkedHashSet<>();
+        Map<String, Integer> map = new HashMap<>();
 
-        formation.add("Engine");
-        formation.add("Sleeper");
-        formation.add("Cargo");
-        formation.add("Guard");
-        formation.add("Sleeper"); // duplicate
+        map.put("Sleeper", 72);
+        map.put("AC Chair", 56);
+        map.put("First Class", 24);
 
-        System.out.println("Final Formation: " + formation);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
     }
 }

@@ -3,25 +3,16 @@ import java.util.*;
 public class App {
     public static void main(String[] args) {
 
-        System.out.println("UC2 - Add Passenger Bogies");
+        System.out.println("UC3 - Unique Bogie IDs");
 
-        List<String> bogies = new ArrayList<>();
+        Set<String> ids = new HashSet<>();
 
-        // Add
-        bogies.add("Sleeper");
-        bogies.add("AC Chair");
-        bogies.add("First Class");
+        ids.add("BG101");
+        ids.add("BG102");
+        ids.add("BG103");
+        ids.add("BG101"); // duplicate
+        ids.add("BG102"); // duplicate
 
-        System.out.println("After adding: " + bogies);
-
-        // Remove
-        bogies.remove("AC Chair");
-
-        System.out.println("After removing AC Chair: " + bogies);
-
-        // Contains
-        System.out.println("Contains Sleeper? " + bogies.contains("Sleeper"));
-
-        System.out.println("Final: " + bogies);
+        System.out.println("Unique IDs: " + ids);
     }
 }

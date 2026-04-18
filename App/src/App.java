@@ -3,16 +3,23 @@ import java.util.*;
 public class App {
     public static void main(String[] args) {
 
-        System.out.println("UC3 - Unique Bogie IDs");
+        System.out.println("UC4 - Ordered Train");
 
-        Set<String> ids = new HashSet<>();
+        LinkedList<String> train = new LinkedList<>();
 
-        ids.add("BG101");
-        ids.add("BG102");
-        ids.add("BG103");
-        ids.add("BG101"); // duplicate
-        ids.add("BG102"); // duplicate
+        train.add("Engine");
+        train.add("Sleeper");
+        train.add("AC");
+        train.add("Cargo");
+        train.add("Guard");
 
-        System.out.println("Unique IDs: " + ids);
+        // Insert at position
+        train.add(2, "Pantry");
+
+        // Remove first & last
+        train.removeFirst();
+        train.removeLast();
+
+        System.out.println("Final Train: " + train);
     }
 }

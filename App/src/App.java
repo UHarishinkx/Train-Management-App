@@ -1,18 +1,35 @@
 import java.util.*;
 
+class Bogie {
+    String name;
+    int capacity;
+
+    Bogie(String name, int capacity) {
+        this.name = name;
+        this.capacity = capacity;
+    }
+
+    public String toString() {
+        return name + " (" + capacity + ")";
+    }
+}
+
 public class App {
     public static void main(String[] args) {
 
-        System.out.println("UC6 - Bogie Capacity");
+        System.out.println("UC7 - Sort by Capacity");
 
-        Map<String, Integer> map = new HashMap<>();
+        List<Bogie> list = new ArrayList<>();
 
-        map.put("Sleeper", 72);
-        map.put("AC Chair", 56);
-        map.put("First Class", 24);
+        list.add(new Bogie("Sleeper", 72));
+        list.add(new Bogie("AC Chair", 56));
+        list.add(new Bogie("First Class", 24));
 
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        // Sort using Comparator
+        list.sort(Comparator.comparingInt(b -> b.capacity));
+
+        for (Bogie b : list) {
+            System.out.println(b);
         }
     }
 }
